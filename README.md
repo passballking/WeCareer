@@ -14,4 +14,5 @@
 
 5. 搜索栏的第二项目前没有作用，因为我根据项目要求估计地址的搜索是从后端做的，可能还要添加一些算法，拿到的就是 jobs.json文件
 
-6.其它均按照项目要求来实现的
+6. 成果视频链接 https://drive.google.com/open?id=0B2kVgtukf2pUSFFjM0NXWEg0dFk
+
