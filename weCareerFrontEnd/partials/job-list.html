@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <!--Body content-->
+        <table class="table table-hover" cellspacing="0" cellspacing=0>
+          <thead>
+            <tr style="height: 100px" >
+              <td class ="wejobs" style="vertical-align: middle;">WE Jobs</td>
+              <td class="col-md-4" style="vertical-align: middle;">
+                <input class="search" ng-model="query" placeholder="Job title, keywords, or company name" onkeypress="if(event.keyCode==13) {btn.click();return false;}">
+              </td>
+              <td class="col-md-2" style="vertical-align: middle;">
+                <input class = "search" placeholder = "location">
+              </td>
+              <td></td>
+              <td style="vertical-align: middle;"><button id = "btn" class="gobutton"  ng-click="search(query)">Go</button></td>
+              
+            </tr>
+          </thead>
+          <tr ng-repeat="job in currentItems | orderBy:orderProp" ng-mouseenter="tablehover = true" ng-mouseleave="tablehover = false" ng-click="go($index)">
+            <td><img ng-src="img/jobs/{{job.companyIcon}}" class = "job-images"><a href="#/jobdash/:1"></a></td>
+            <td class="jobTable-linetext " style="vertical-align: middle;" ng-class="{inverse:tablehover}">{{job.companyName}}</td>
+            <td class="jobTable-linetext " style="vertical-align: middle;" ng-class="{inverse:tablehover}">{{job.title}}</td>
+            <td class="table-joblocation col-md-3" style="vertical-align: middle;" ng-class="{inverse:tablehover}">{{job.location}}</td>
+            <td class="col-md-2" style="vertical-align: middle; font-size: 60%;" ng-class="{inverse:tablehover}">Posted:{{job.postedAt}}</td>
+          </tr>
+        </table>
+
+        
+ <!-- pager -->
+      <ul ng-if="pager.totalPages" class="pagination">
+          <li ng-class="{'disabled' : pager.currentPage == 1}">
+              <a ng-click="setPage(1)">First</a>
+          </li>
+          <li ng-class="{'disabled' : pager.currentPage == 1}">
+              <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+          </li>
+          <li ng-repeat="page in pager.pages" ng-class="{'active' : pager.currentPage == page}">
+              <a ng-click="setPage(page)">{{page}}</a>
+          </li>                
+          <li ng-class="{'disabled' : pager.currentPage == pager.totalPages}">
+              <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+          </li>
+          <li ng-class="{'disabled' : pager.currentPage == pager.totalPages}">
+              <a ng-click="setPage(pager.totalPages)">Last</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

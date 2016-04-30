@@ -1,0 +1,74 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+table, tr{
+    border: 5px solid #E1F5F5;
+
+}
+.search{
+  height: 50px;
+  width: 100%;
+}
+
+.wejobs{
+   font-size: 150%; 
+   color: #00A5AF;
+   font-family: 'Interstate Black'; 
+   font-weight: bold; 
+   vertical-align: middle;
+   width: 200px;
+}
+.job-images {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.jobTable-linetext {
+  font-size: 120%; 
+  font-weight: bold; 
+  color: #00A5AF;
+  vertical-align: middle;
+}
+
+.table-joblocation {
+  font-size: 120%; 
+  font-weight: bold; 
+  color: black;
+}
+
+.inverse {
+  color:#ffffff;
+}
+
+.gobutton {
+  font-family: 'arial black';
+  font-weight: bold;
+  color: #000000 !important;
+  font-size: 30px;
+
+  padding: 0px 35px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  background: #FDCC42;
+}
+.testbutton:hover {
+  color: #FFFFFF !important;
+  background: #00A5AF;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #00A5AF;
+}
+
+ul li{
+  cursor:pointer;
+}
+
+table{
+  cursor: pointer;
+}
